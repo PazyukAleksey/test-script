@@ -171,20 +171,21 @@ gsap.registerPlugin(ScrollTrigger), ScrollTrigger.create({
     onUpdate: e => {
         cameraAnimation(e.progress)
     }
-// }), ScrollTrigger.create({
-//     trigger: ".unlimited-solutions",
-//     start: "top 10%",
-//     onEnter: () => {
-//         isProducts = !0, animationAction?.stop()
-//     },
-//     onLeaveBack: () => {
-//         isProducts = !1, headMesh && gsap.to(headMesh.rotation, {
-//             x: headInitialRotation.x,
-//             y: headInitialRotation.y,
-//             duration: .1,
-//             delay: .01
-//         })
-//     }
+}), ScrollTrigger.create({
+    trigger: ".unlimited-solutions",
+    start: "top 10%",
+    end: "95%",
+    onEnter: () => {
+        isProducts = !0, animationAction?.stop()
+    },
+    onLeaveBack: () => {
+        isProducts = !1, headMesh && gsap.to(headMesh.rotation, {
+            x: headInitialRotation.x,
+            y: headInitialRotation.y,
+            duration: .1,
+            delay: .01
+        })
+    }
 });
 const changeSlide = () => {
     index = index > slides.length - 2 ? 0 : index, slides.forEach(((e, t) => {
