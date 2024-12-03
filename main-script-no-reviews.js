@@ -1,17 +1,15 @@
-// import * as THREE from "three";
-// import {
-//     GLTFLoader
-// } from "three/addons/loaders/GLTFLoader.min.js";
-// import {
-//     RGBELoader
-// } from "three/addons/loaders/RGBELoader.min.js";
-// import {
-//     MeshoptDecoder
-// } from "three/addons/libs/meshopt_decoder.module.js";
-import * as THREE from "https://cdn.jsdelivr.net/npm/three@latest/build/three.module.js";
-import { GLTFLoader } from "https://cdn.jsdelivr.net/npm/three/examples/jsm/loaders/GLTFLoader.js";
-import { RGBELoader } from "https://cdn.jsdelivr.net/npm/three/examples/jsm/loaders/RGBELoader.js";
-import { MeshoptDecoder } from "https://cdn.jsdelivr.net/npm/three/examples/jsm/libs/meshopt_decoder.module.js";
+import * as THREE from "three";
+import {
+    GLTFLoader
+} from "three/addons/loaders/GLTFLoader.min.js";
+import {
+    RGBELoader
+} from "three/addons/loaders/RGBELoader.min.js";
+import {
+    MeshoptDecoder
+} from "three/addons/libs/meshopt_decoder.module.js";
+
+console.log(THREE)
 let mixer, bakedMesh, headMesh, animationAction, isProducts, isTestimonials, isCameraAnimInProgress, featIndex = 0,
     index = 0;
 const container = document.querySelector(".webgl"),
