@@ -191,9 +191,11 @@ const changeSlide = () => {
     index = index > slides.length - 2 ? 0 : index, slides.forEach(((e, t) => {
         console.log("index: " + index), index === t ? e.classList.add("active") : e.classList.remove("active");
         const lineWrapper = document.querySelector('.hero-info-line-wrapper');
-        lineWrapper.classList.remove('start-animation');
-        void lineWrapper.offsetWidth;
-        lineWrapper.classList.add('start-animation');
+        if(lineWrapper) {
+            lineWrapper.classList.remove('start-animation');
+            void lineWrapper.offsetWidth;
+            lineWrapper.classList.add('start-animation');
+        }
     })), index++
 };
 changeSlide();
