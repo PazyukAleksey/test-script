@@ -8,8 +8,6 @@ import {
 import {
     MeshoptDecoder
 } from "three/addons/libs/meshopt_decoder.module.js";
-
-console.log(THREE)
 let mixer, bakedMesh, headMesh, animationAction, isProducts, isTestimonials, isCameraAnimInProgress, featIndex = 0,
     index = 0;
 const container = document.querySelector(".webgl"),
@@ -191,7 +189,11 @@ gsap.registerPlugin(ScrollTrigger), ScrollTrigger.create({
 });
 const changeSlide = () => {
     index = index > slides.length - 2 ? 0 : index, slides.forEach(((e, t) => {
-        console.log("index: " + index), index === t ? e.classList.add("active") : e.classList.remove("active")
+        console.log("index: " + index), index === t ? e.classList.add("active") : e.classList.remove("active");
+        const lineWrapper = document.querySelector('.hero-info-line-wrapper');
+        lineWrapper.classList.remove('start-animation');
+        void lineWrapper.offsetWidth;
+        lineWrapper.classList.add('start-animation');
     })), index++
 };
 changeSlide();
